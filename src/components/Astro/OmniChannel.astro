@@ -1,72 +1,134 @@
 ---
 import { MessageCircle, Send, Globe, Code2 } from 'lucide-react';
+import SectionTitle from './SectionTitle.astro';
 ---
 <section id="omnichannel-section" class="bg-white py-24 text-zinc-950 relative border-b border-zinc-100">
   <div class="max-w-[1400px] w-full mx-auto px-6">
     
-    <!-- Title -->
-    <div class="mb-16 md:mb-20 max-w-2xl">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 leading-[1.05]">Conecta en cualquier lugar</h2>
-      <p class="text-xl font-light text-zinc-500">Tus canales favoritos, integrados de forma nativa.</p>
-    </div>
+    <SectionTitle 
+      title="Conecta en cualquier lugar" 
+      color = 'text-brand-deep'
+      subtitle="Tus canales favoritos, integrados de forma nativa." 
+      colorText = 'text-gray-500'
+    />
 
     <!-- Bento Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
-      <!-- Web Widget -->
-      <div class="md:col-span-2 bg-zinc-50 rounded-[2rem] p-10 border border-zinc-200 flex flex-col justify-between min-h-[400px] group overflow-hidden relative">
+      <!-- WhatsApp (Highlighted) -->
+      <div class="md:col-span-2 bg-[#128C7E] text-white rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden group animate-on-scroll hover-3d">
+        <!-- WhatsApp Background Pattern -->
+        <div class="absolute inset-0 z-0 opacity-15" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 15l2 5h5l-4 3 1 5-4-3-4 3 1-5-4-3h5z'/%3E%3Ccircle cx='75' cy='25' r='5'/%3E%3Cpath d='M10 75q5-5 10 0t10 0'/%3E%3Cpath d='M85 70a4 4 0 0 0-8 0 4 4 0 0 0-8 0q0 10 8 18q8-8 8-18z'/%3E%3Cpolygon points='50,45 55,55 45,55'/%3E%3Cpath d='M80 10l5 5-5 5'/%3E%3Ccircle cx='40' cy='20' r='1.5' fill='%23ffffff'/%3E%3Ccircle cx='90' cy='45' r='1.5' fill='%23ffffff'/%3E%3Ccircle cx='25' cy='50' r='1.5' fill='%23ffffff'/%3E%3Ccircle cx='60' cy='85' r='1.5' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 80px 80px; background-repeat: repeat;"></div>
+        
         <div class="relative z-10 max-w-md">
-          <div class="w-12 h-12 bg-white rounded-xl border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
-            <Globe className="text-zinc-950" size={24} strokeWidth={1.5} />
+          <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 flex items-center justify-center mb-6 shadow-sm">
+            <MessageCircle className="text-white" size={24} strokeWidth={1.5} />
           </div>
-          <h3 class="text-3xl font-semibold mb-4 tracking-tight">Tu Sitio Web</h3>
-          <p class="text-zinc-600 font-light leading-relaxed mb-8">
-            Inserta nuestro widget flotante en tu landing page o SaaS con una sola línea de código. Adapta los colores a tu marca y captura leads directamente desde tu página de inicio.
+          <h3 class="text-3xl font-semibold mb-4 tracking-tight">WhatsApp</h3>
+          <p class="text-white/90 font-light leading-relaxed mb-8">
+            Soporte nativo con IA. Maneja reservaciones, responde dudas frecuentes y transfiere a un agente humano cuando sea necesario, todo desde la app favorita de tus clientes.
           </p>
-          <button class="text-sm font-medium text-zinc-950 flex items-center gap-2 hover:gap-3 transition-all">
-            Descubrir más <span class="text-zinc-400">&rarr;</span>
+          <button class="text-sm font-medium text-white flex items-center gap-2 hover:gap-3 transition-all px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/10 w-fit mt-4">
+            Descubrir más <span class="text-white/70">&rarr;</span>
           </button>
         </div>
-        <!-- Abstract Decoration -->
-        <div class="absolute right-0 bottom-0 w-64 h-64 bg-zinc-200/50 rounded-tl-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
       </div>
 
       <!-- Telegram -->
-      <div class="md:col-span-1 bg-zinc-950 text-white rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden group">
+      <div class="md:col-span-1 bg-[#229ED9] text-white rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden group animate-on-scroll hover-3d">
+        <!-- Telegram Background Pattern -->
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20l20 5-20 15z'/%3E%3Cpath d='M20 40l5-10 15-5'/%3E%3Cpath d='M70 30q-5-10 10-10 10 0 10 10 5 0 5 10 0 10-15 10H60q-10 0-10-10 0-10 10-10z'/%3E%3Cpath d='M20 80l2 4h4l-3 3 1 4-4-3-4 3 1-4-3-3h4z'/%3E%3Cpath d='M70 80c0-10 20-10 20 0 0 10-20 10-20 0z'/%3E%3Cpath d='M70 85l-5 5 8-3'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 80px 80px; background-repeat: repeat;"></div>
+        
         <div class="relative z-10">
-          <div class="w-12 h-12 bg-zinc-800 rounded-xl border border-zinc-700 flex items-center justify-center mb-6">
+          <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 flex items-center justify-center mb-6">
             <Send className="text-white" size={24} strokeWidth={1.5} />
           </div>
           <h3 class="text-2xl font-semibold mb-4 tracking-tight">Telegram</h3>
-          <p class="text-zinc-400 font-light leading-relaxed">
-            Configura flujos con botones interactivos y respuestas multimedia para tu comunidad.
+          <p class="text-white/90 font-light leading-relaxed mb-8">
+            Configura flujos con botones interactivos y respuestas multimedia de manera natural para tu comunidad.
           </p>
+          <button class="text-sm font-medium text-white flex items-center gap-2 hover:gap-3 transition-all px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/10 w-fit mt-auto">
+            Descubrir más <span class="text-white/70">&rarr;</span>
+          </button>
         </div>
-        <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-zinc-800 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
       </div>
 
-      <!-- WhatsApp -->
-      <div class="md:col-span-1 bg-emerald-50 rounded-[2rem] p-10 border border-emerald-100 flex flex-col justify-between min-h-[400px] relative overflow-hidden group">
+      <!-- Web Widget -->
+      <div class="md:col-span-1 bg-[#A5F3FC] text-zinc-900 rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden group animate-on-scroll hover-3d">
+        <!-- Web Background Pattern -->
+        <div class="absolute inset-0 z-0 opacity-5" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M0 25h100M0 50h100M0 75h100M25 0v100M50 0v100M75 0v100' opacity='0.2' /%3E%3Ccircle cx='25' cy='50' r='3' fill='%23000000' /%3E%3Ccircle cx='75' cy='25' r='3' fill='%23000000' /%3E%3Ccircle cx='50' cy='75' r='3' fill='%23000000' /%3E%3Cpath d='M25 50L75 25M25 50L50 75M75 25L50 75' opacity='0.4' /%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 80px 80px; background-repeat: repeat;"></div>
+        
         <div class="relative z-10">
-          <div class="w-12 h-12 bg-white rounded-xl border border-emerald-200 flex items-center justify-center mb-6 shadow-sm">
-            <MessageCircle className="text-emerald-700" size={24} strokeWidth={1.5} />
+          <div class="w-12 h-12 bg-white/60 backdrop-blur-md rounded-xl border border-white/50 flex items-center justify-center mb-6 shadow-sm">
+            <Globe className="text-[#0891B2]" size={24} strokeWidth={1.5} />
           </div>
-          <h3 class="text-2xl font-semibold mb-4 tracking-tight text-emerald-950">WhatsApp</h3>
-          <p class="text-emerald-800/80 font-light leading-relaxed">
-            Soporte nativo con IA. Maneja reservaciones y transfiere a un agente humano cuando sea necesario.
+          <h3 class="text-2xl font-semibold mb-4 tracking-tight">Tu Sitio Web</h3>
+          <p class="text-zinc-700 font-light leading-relaxed mb-8">
+            Inserta nuestro widget flotante con una sola línea de código. Adapta los colores a tu marca y captura leads.
           </p>
+          <button class="text-sm font-medium text-zinc-900 flex items-center gap-2 hover:gap-3 transition-all px-5 py-2.5 rounded-full border border-zinc-900/20 hover:bg-zinc-900/5 w-fit mt-auto">
+            Descubrir más <span class="text-zinc-500">&rarr;</span>
+          </button>
         </div>
       </div>
-      
+
       <!-- API Abierta -->
-      <div class="md:col-span-2 bg-white rounded-[2rem] p-10 border border-zinc-200 flex flex-col justify-center items-center text-center min-h-[400px] shadow-sm group">
-         <div class="w-12 h-12 bg-zinc-50 rounded-xl border border-zinc-200 flex items-center justify-center mb-6 text-zinc-500 group-hover:text-zinc-950 transition-colors">
-            <Code2 size={24} strokeWidth={1.5} />
+      <div class="md:col-span-2 bg-emerald-50/50 text-brand-deep rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden group animate-on-scroll border border-emerald-100 hover-3d">
+         <!-- API Background Pattern -->
+         <div class="absolute inset-0 z-0 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23064530' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M30 20 C 20 20 20 30 15 30 C 20 30 20 40 30 40' /%3E%3Cpath d='M70 60 C 80 60 80 70 85 70 C 80 70 80 80 70 80' /%3E%3Cpath d='M40 70 L 30 80 L 40 90' /%3E%3Cpath d='M60 10 L 70 20 L 60 30' /%3E%3Cpath d='M45 35 L 55 15' /%3E%3Cpath d='M55 85 L 45 65' /%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 60px 60px; background-repeat: repeat;"></div>
+         
+         <div class="relative z-10 max-w-md">
+           <div class="w-12 h-12 bg-white rounded-xl border border-emerald-200 flex items-center justify-center mb-6 text-brand-medium shadow-sm group-hover:text-brand-deep transition-colors">
+              <Code2 size={24} strokeWidth={1.5} />
+           </div>
+           <h3 class="text-3xl font-semibold tracking-tight mb-4">API Abierta</h3>
+           <p class="text-brand-dark/80 font-light leading-relaxed mb-8">
+             Diseñado para desarrolladores. Conecta cualquier otro canal o sistema interno usando nuestra API REST documentada y mantén todo sincronizado con webhooks en tiempo real.
+           </p>
+           <button class="text-sm font-medium text-brand-deep flex items-center gap-2 hover:gap-3 transition-all px-5 py-2.5 rounded-full border border-brand-deep/20 hover:bg-brand-deep/5 w-fit mt-auto">
+             Ver Documentación <span class="text-brand-medium">&rarr;</span>
+           </button>
          </div>
-         <h3 class="text-2xl font-semibold tracking-tight text-zinc-950 mb-4">API Abierta</h3>
-         <p class="text-zinc-500 font-light max-w-md">Conecta cualquier otro canal o sistema interno usando nuestra API REST documentada y webhooks en tiempo real.</p>
       </div>
 
     </div>
   </div>
 </section>
+
+<style>
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (min-width: 768px) {
+    .hover-3d {
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+      will-change: transform;
+    }
+    .hover-3d.visible:hover {
+      transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) scale(1.02);
+      box-shadow: 20px 20px 40px rgba(0,0,0,0.08), -20px -20px 40px rgba(255,255,255,0.5);
+      z-index: 10;
+    }
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
