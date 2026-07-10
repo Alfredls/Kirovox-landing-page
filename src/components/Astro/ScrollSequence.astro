@@ -1,48 +1,55 @@
 ---
+import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
 ---
-<section id="scroll-sequence" class="relative w-full bg-zinc-950 overflow-hidden">
+<section id="scroll-sequence" class="relative w-full bg-zinc-50 overflow-hidden">
   
   <!-- Pinned Container -->
   <div class="seq-pinned w-full h-screen relative overflow-hidden flex items-center justify-center">
     
     <!-- Backgrounds / Slides -->
     
-    <!-- SLIDE 1: Dark -->
-    <div class="seq-bg seq-bg-1 absolute inset-0 bg-zinc-950 flex flex-col md:flex-row items-center justify-center md:justify-start px-6 md:pl-32">
-        <!-- Giant Background Number -->
-        <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-10 text-[60vw] md:text-[35vw] font-black text-white/5 leading-none select-none">01</h2>
+    <!-- SLIDE 1: Privada y Segura -->
+    <div class="seq-bg seq-bg-1 absolute inset-0 bg-zinc-50 flex flex-col items-center justify-start md:justify-center pt-[12vh] md:pt-0">
+        <!-- Giant Background Icon -->
+        <ShieldCheck class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-auto md:right-[10%] w-[70vw] h-[70vw] md:w-[35vw] md:h-[35vw] text-black/[0.03] select-none" strokeWidth={1} />
         <!-- Content -->
-        <div class="relative z-10 w-full md:w-[400px] md:ml-auto md:mr-32 text-zinc-50 text-center md:text-left mt-[300px] md:mt-0">
-            <h3 class="text-4xl md:text-6xl font-semibold mb-4 tracking-tight leading-[1.05]">Captura <br/><span class="text-zinc-500">Leads</span></h3>
-            <p class="text-lg md:text-xl font-light text-zinc-400">
-              Instala Kirovox en tu landing page en segundos. Convierte visitantes en prospectos calificados automáticamente 24/7.
-            </p>
+        <div class="w-full max-w-[1400px] mx-auto px-6 flex justify-center md:justify-start">
+            <div class="relative z-10 w-full md:w-[420px] text-zinc-900 text-center md:text-left">
+                <h3 class="text-4xl md:text-6xl font-semibold mb-4 tracking-tight leading-[1.05]">Privado y <br/><span class="text-brand">Seguro</span></h3>
+                <p class="text-lg md:text-xl font-light text-zinc-600">
+                  Tu información está protegida en todo momento. Cumplimos con altos estándares de seguridad para garantizar que los datos de tu empresa nunca se expongan.
+                </p>
+            </div>
         </div>
     </div>
 
-    <!-- SLIDE 2: Light -->
-    <div class="seq-bg seq-bg-2 absolute inset-0 bg-zinc-100 flex flex-col md:flex-row items-center justify-center md:justify-start px-6 md:pl-32 opacity-0">
-        <!-- Giant Background Number -->
-        <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-10 text-[60vw] md:text-[35vw] font-black text-black/5 leading-none select-none">02</h2>
+    <!-- SLIDE 2: Fácil de Actualizar -->
+    <div class="seq-bg seq-bg-2 absolute inset-0 bg-[#A5F3FC] flex flex-col items-center justify-end md:justify-center pb-[12vh] md:pb-0 opacity-0">
+        <!-- Giant Background Icon -->
+        <RefreshCcw class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:right-auto md:left-[10%] w-[70vw] h-[70vw] md:w-[35vw] md:h-[35vw] text-cyan-900/[0.04] select-none" strokeWidth={1} />
         <!-- Content -->
-        <div class="relative z-10 w-full md:w-[400px] text-zinc-950 text-center md:text-left mb-[300px] md:mb-0">
-            <h3 class="text-4xl md:text-6xl font-semibold mb-4 tracking-tight leading-[1.05]">IA que <br/><span class="text-zinc-500">Aprende</span></h3>
-            <p class="text-lg md:text-xl font-light text-zinc-600">
-              Sube tus PDFs y manuales. Nuestro modelo genera respuestas precisas sin alucinaciones, ahorrando horas de soporte.
-            </p>
+        <div class="w-full max-w-[1400px] mx-auto px-6 flex justify-center md:justify-end">
+            <div class="relative z-10 w-full md:w-[420px] text-zinc-900 text-center md:text-left">
+                <h3 class="text-4xl md:text-6xl font-semibold mb-4 tracking-tight leading-[1.05]">Fácil de <br/><span class="text-[#0891B2]">Actualizar</span></h3>
+                <p class="text-lg md:text-xl font-light text-zinc-700">
+                  Sube tus manuales, PDFs o enlaces web en segundos. El chatbot aprende automáticamente la nueva información sin necesidad de programar nada.
+                </p>
+            </div>
         </div>
     </div>
 
-    <!-- SLIDE 3: Darker -->
-    <div class="seq-bg seq-bg-3 absolute inset-0 bg-zinc-900 flex flex-col md:flex-row items-center justify-center md:justify-start px-6 md:pl-32 opacity-0">
-        <!-- Giant Background Number -->
-        <h2 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-10 text-[60vw] md:text-[35vw] font-black text-white/5 leading-none select-none">03</h2>
+    <!-- SLIDE 3: Respuestas Precisas -->
+    <div class="seq-bg seq-bg-3 absolute inset-0 bg-[#10B981] flex flex-col items-center justify-start md:justify-center pt-[12vh] md:pt-0 opacity-0">
+        <!-- Giant Background Icon -->
+        <Sparkles class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-auto md:right-[10%] w-[70vw] h-[70vw] md:w-[35vw] md:h-[35vw] text-white/[0.1] select-none" strokeWidth={1} />
         <!-- Content -->
-        <div class="relative z-10 w-full md:w-[400px] md:ml-auto md:mr-32 text-zinc-50 text-center md:text-left mt-[300px] md:mt-0">
-            <h3 class="text-4xl md:text-6xl font-semibold mb-4 tracking-tight leading-[1.05]">Traspaso <br/><span class="text-zinc-500">Humano</span></h3>
-            <p class="text-lg md:text-xl font-light text-zinc-400">
-              Cuando la IA no es suficiente, la conversación se transfiere a tu equipo humano con todo el historial del cliente intacto.
-            </p>
+        <div class="w-full max-w-[1400px] mx-auto px-6 flex justify-center md:justify-start">
+            <div class="relative z-10 w-full md:w-[420px] text-white text-center md:text-left">
+                <h3 class="text-4xl md:text-6xl font-semibold mb-4 tracking-tight leading-[1.05]">Respuestas <br/><span class="text-brand-deep">Precisas</span></h3>
+                <p class="text-lg md:text-xl font-light text-white/90">
+                  Genera respuestas exactas basadas únicamente en tus documentos. Sin alucinaciones, garantizando que tus clientes siempre reciban la información correcta.
+                </p>
+            </div>
         </div>
     </div>
 
@@ -52,7 +59,7 @@
     <!-- ============================================== -->
     <div class="absolute inset-0 z-50 flex items-center justify-center pointer-events-none" style="perspective: 1200px;">
         
-        <div class="scroll-seq-phone relative w-[260px] md:w-[320px] h-[540px] md:h-[660px] bg-zinc-950 rounded-[3rem] border-[8px] border-zinc-900 shadow-2xl overflow-hidden flex flex-col" style="transform-style: preserve-3d; box-shadow: -20px 20px 60px rgba(0,0,0,0.5);">
+        <div class="scroll-seq-phone relative w-[240px] md:w-[320px] h-[480px] md:h-[660px] bg-zinc-950 rounded-[3rem] border-[8px] border-zinc-900 shadow-2xl overflow-hidden flex flex-col" style="transform-style: preserve-3d; box-shadow: -20px 20px 60px rgba(0,0,0,0.5);">
             
             <!-- Camera Notch -->
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[24px] bg-zinc-900 rounded-b-[1rem] z-50"></div>
@@ -63,48 +70,62 @@
 
             <!-- SCREENS -->
             
-            <!-- Screen 1: Chat Widget -->
-            <div class="phone-screen phone-screen-1 absolute inset-0 bg-zinc-50 flex flex-col">
-                <div class="h-16 bg-white border-b border-zinc-200 flex items-end justify-center pb-3 text-zinc-950 font-medium text-sm shadow-sm z-10">Soporte Bot</div>
-                <div class="flex-1 p-4 flex flex-col justify-end space-y-3 pb-8">
-                    <div class="bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm text-xs border border-zinc-200 self-start w-[85%] text-zinc-700">Hola, ¿En qué puedo ayudarte hoy?</div>
-                    <div class="bg-zinc-950 p-3 rounded-2xl rounded-tr-sm shadow-sm text-xs text-white self-end w-[85%] font-light">Quiero cotizar un plan.</div>
-                    <div class="bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm text-xs border border-zinc-200 self-start w-[85%] text-zinc-700">¡Claro! Tenemos planes desde $29/mes.</div>
+            <!-- Screen 1: Security -->
+            <div class="phone-screen phone-screen-1 absolute inset-0 bg-zinc-950 flex flex-col items-center justify-center p-6 text-center">
+                <div class="w-16 h-16 bg-brand-deep/30 rounded-full flex items-center justify-center mb-6 border border-brand-deep/50">
+                    <svg class="w-8 h-8 text-brand-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                </div>
+                <h4 class="text-white font-medium mb-2 text-lg">Cifrado Extremo</h4>
+                <p class="text-zinc-400 text-xs font-light leading-relaxed mb-8">Todos tus documentos están encriptados y aislados. Nadie más tiene acceso a tu data.</p>
+                
+                <div class="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-3 flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-brand-light animate-pulse"></div>
+                    <span class="text-xs text-zinc-300">Conexión Segura</span>
                 </div>
             </div>
 
-            <!-- Screen 2: PDF RAG -->
-            <div class="phone-screen phone-screen-2 absolute inset-0 bg-zinc-900 opacity-0 flex flex-col">
-                <div class="h-16 bg-zinc-950 flex items-end justify-center pb-3 text-white font-medium text-sm border-b border-zinc-800 z-10">Conocimiento IA</div>
+            <!-- Screen 2: Easy Update -->
+            <div class="phone-screen phone-screen-2 absolute inset-0 bg-zinc-50 opacity-0 flex flex-col">
+                <div class="h-16 bg-white border-b border-zinc-200 flex items-end justify-center pb-3 text-zinc-950 font-medium text-sm shadow-sm z-10">Conocimiento</div>
                 <div class="flex-1 p-4 flex flex-col space-y-3 pt-6">
-                    <div class="w-full bg-zinc-800 p-3 rounded-xl flex items-center gap-3 border border-zinc-700">
-                        <div class="w-8 h-8 bg-zinc-100 rounded-lg flex items-center justify-center text-zinc-900 font-bold text-xs">PDF</div>
+                    <div class="w-full bg-white p-3 rounded-xl flex items-center gap-3 border border-zinc-200 shadow-sm">
+                        <div class="w-8 h-8 bg-[#A5F3FC] rounded-lg flex items-center justify-center text-[#0891B2] font-bold text-xs">PDF</div>
                         <div class="flex-1">
-                            <div class="h-2 w-20 bg-zinc-600 rounded mb-1"></div>
-                            <div class="h-2 w-12 bg-zinc-700 rounded"></div>
+                            <div class="text-xs font-medium text-zinc-800">Manual_V3.pdf</div>
+                            <div class="text-[10px] text-zinc-500">Subido hace 2 min</div>
                         </div>
+                        <svg class="w-4 h-4 text-[#0891B2]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
-                    <div class="w-full bg-zinc-800 p-3 rounded-xl flex items-center gap-3 border border-zinc-700">
-                        <div class="w-8 h-8 bg-zinc-100 rounded-lg flex items-center justify-center text-zinc-900 font-bold text-xs">DOC</div>
+                    <div class="w-full bg-white p-3 rounded-xl flex items-center gap-3 border border-zinc-200 shadow-sm">
+                        <div class="w-8 h-8 bg-brand-light/20 rounded-lg flex items-center justify-center text-brand font-bold text-xs">WEB</div>
                         <div class="flex-1">
-                            <div class="h-2 w-24 bg-zinc-600 rounded mb-1"></div>
-                            <div class="h-2 w-16 bg-zinc-700 rounded"></div>
+                            <div class="text-xs font-medium text-zinc-800">kirovox.com/faq</div>
+                            <div class="text-[10px] text-zinc-500">Sincronizado hoy</div>
                         </div>
+                        <svg class="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                     </div>
-                     <div class="mt-6 bg-zinc-950 p-4 rounded-xl border border-zinc-800 shadow-inner">
-                        <p class="text-zinc-500 text-[10px] mb-2 uppercase tracking-wider font-semibold">Respuesta Generada</p>
-                        <p class="text-zinc-300 text-xs leading-relaxed font-light">Según el manual v2.0, el proceso de instalación requiere permisos de admin.</p>
+                     <div class="mt-4 bg-[#0891B2] p-4 rounded-xl shadow-md text-white">
+                        <p class="text-cyan-100 text-[10px] mb-1 uppercase tracking-wider font-semibold">Estado</p>
+                        <p class="text-sm font-medium">Chatbot entrenado y listo</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Screen 3: Human Agent -->
-            <div class="phone-screen phone-screen-3 absolute inset-0 bg-zinc-50 opacity-0 flex flex-col">
-                <div class="h-16 bg-white border-b border-zinc-200 flex items-end justify-center pb-3 text-zinc-950 font-medium text-sm shadow-sm z-10">Agente Carlos</div>
+            <!-- Screen 3: Accurate Responses -->
+            <div class="phone-screen phone-screen-3 absolute inset-0 bg-zinc-900 opacity-0 flex flex-col">
+                <div class="h-16 bg-zinc-950 flex items-end justify-center pb-3 text-white font-medium text-sm shadow-sm z-10 border-b border-zinc-800">Chat Cliente</div>
                 <div class="flex-1 p-4 flex flex-col space-y-3 justify-end pb-8">
-                    <div class="text-center text-[10px] text-zinc-400 font-bold uppercase tracking-wider my-2">Chat transferido</div>
-                    <div class="bg-zinc-950 p-3 rounded-2xl rounded-tl-sm shadow-sm text-xs text-white self-start w-[85%] font-light">
-                        Hola, soy Carlos de soporte. Veo que tienes dudas con la instalación, yo te ayudo a completarla.
+                    <div class="bg-zinc-800 p-3 rounded-2xl rounded-tr-sm shadow-sm text-xs text-white self-end w-[85%] font-light">
+                        ¿Tienen política de devoluciones?
+                    </div>
+                    <div class="bg-brand-deep/80 p-3 rounded-2xl rounded-tl-sm shadow-sm border border-brand-deep self-start w-[90%]">
+                        <p class="text-xs text-white font-light mb-2">Sí, aceptamos devoluciones dentro de los primeros 30 días con el empaque original intacto.</p>
+                        <div class="flex items-center gap-1 text-[9px] text-brand-light bg-black/30 px-2 py-1 rounded w-fit">
+                            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Fuente: Manual_V3.pdf (Pág. 12)
+                        </div>
                     </div>
                 </div>
             </div>
@@ -149,6 +170,12 @@
     }, (context) => {
         let isDesktop = context.conditions ? (context.conditions as any).isDesktop : true;
 
+        // Reset phone position for responsive behavior on Slide 1
+        gsap.set('.scroll-seq-phone', {
+            xPercent: isDesktop ? 45 : 0,
+            yPercent: isDesktop ? 0 : 25
+        });
+
         // --- TRANSITION TO SLIDE 2 ---
         tl.addLabel('slide2')
           // Crossfade Backgrounds
@@ -157,8 +184,8 @@
           
           // Animate Phone (2.5D effect)
           .to('.scroll-seq-phone', { 
-              xPercent: isDesktop ? -70 : 0,  // Move left on desktop, stay center on mobile
-              yPercent: isDesktop ? 0 : -30,  // Move up slightly on mobile
+              xPercent: isDesktop ? -45 : 0,  // Move left on desktop, stay center on mobile
+              yPercent: isDesktop ? 0 : -25,  // Move up slightly on mobile
               rotationY: isDesktop ? 25 : 10,   // Rotate to face right
               rotationX: 10,
               rotationZ: -2,
@@ -185,7 +212,7 @@
           
           // Animate Phone (2.5D effect)
           .to('.scroll-seq-phone', { 
-              xPercent: isDesktop ? 70 : 0,   // Move right on desktop
+              xPercent: isDesktop ? 45 : 0,   // Move right on desktop
               yPercent: isDesktop ? 0 : 30,   // Move down on mobile
               rotationY: isDesktop ? -25 : -10,  // Rotate to face left
               rotationX: -5,
