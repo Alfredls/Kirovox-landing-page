@@ -1,0 +1,15 @@
+---
+import Button from './Button.astro';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
+  <div class="max-w-[1400px] mx-auto w-full h-16 flex items-center justify-between px-6">
+    <div class="flex items-center gap-2">
+      <img src="/logo.svg" alt="Kirovox Logo" class="h-8" />
+      <span class="font-bold text-xl tracking-tight text-brand-deep">Kirovox</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <Button href="#pricing" variant="primary" size="sm" class="px-5 py-2">Empezar</Button>
+    </div>
+  </div>
+</nav>
