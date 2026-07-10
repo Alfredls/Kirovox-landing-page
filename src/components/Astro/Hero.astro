@@ -93,7 +93,7 @@ const images = [img1, img2, img3, img4, img5];
       
       <!-- Mobile Auto-Scrolling Marquee (lg:hidden) -->
       <div class="lg:hidden w-full absolute top-1/2 -translate-y-1/2 mask-edges">
-        <div class="flex gap-4 w-max animate-marquee hover:[animation-play-state:paused]">
+        <div class="flex gap-4 w-max animate-marquee hover:[animation-play-state:paused] will-change-transform">
           {[...images, ...images].map((img) => (
             <figure class="flex-none w-[260px] sm:w-[320px] rounded-[18px] overflow-hidden shadow-xl border border-zinc-200/60 bg-white">
               <Image src={img} alt="Gallery image" class="w-full h-auto object-cover pointer-events-none" />
@@ -136,10 +136,13 @@ const images = [img1, img2, img3, img4, img5];
     }, "-=1.0");
 
     // Optimized infinite 3D Flow Animation for Desktop
-    const cards = gsap.utils.toArray('.hero-3d-card') as HTMLElement[];
-    if (cards.length > 0) {
-      const totalDuration = 24; // Transición más lenta (antes 12)
-      const cardTimelines: gsap.core.Timeline[] = [];
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1024px)", () => {
+      const cards = gsap.utils.toArray('.hero-3d-card') as HTMLElement[];
+      if (cards.length > 0) {
+        const totalDuration = 24; // Transición más lenta (antes 12)
+        const cardTimelines: gsap.core.Timeline[] = [];
 
       cards.forEach((card, i) => {
         const cardTl = gsap.timeline({ repeat: -1 });
@@ -258,8 +261,17 @@ const images = [img1, img2, img3, img4, img5];
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('pointerup', onPointerUp);
         window.addEventListener('pointercancel', onPointerUp);
+
+        // Cleanup event listeners when matchMedia conditions are no longer met (or on unmount)
+        return () => {
+          heroVisual.removeEventListener('pointerdown', onPointerDown);
+          window.removeEventListener('pointermove', onPointerMove);
+          window.removeEventListener('pointerup', onPointerUp);
+          window.removeEventListener('pointercancel', onPointerUp);
+        };
       }
     }
+    }); // end matchMedia
   };
 
   initHeroAnimations();
