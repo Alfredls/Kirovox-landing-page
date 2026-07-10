@@ -1,0 +1,96 @@
+---
+import { CalendarDays, BarChart3, Zap, Users } from 'lucide-react';
+---
+<section id="bento-section" class="bg-zinc-50 py-32 text-zinc-900 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-emerald-950">Un ecosistema completo.</h2>
+      <p class="text-xl text-zinc-600">Todo lo que tu equipo necesita en un solo lugar.</p>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+      
+      <!-- Citas -->
+      <div class="bento-card md:col-span-2 bg-white rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl hover:shadow-emerald-900/5 transition-shadow p-8 flex flex-col justify-between overflow-hidden relative group">
+        <div class="absolute inset-0 bg-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <div class="relative z-10">
+          <CalendarDays size={32} className="text-blue-500 mb-4" />
+          <h3 class="text-2xl font-semibold mb-2">Gestión de Citas</h3>
+          <p class="text-zinc-500">Programa reuniones automáticamente directamente desde el chat.</p>
+        </div>
+        <!-- Decorative element -->
+        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-zinc-50 rounded-full border border-zinc-100 opacity-50 shadow-inner"></div>
+      </div>
+
+      <!-- Métricas -->
+      <div class="bento-card bg-white rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl hover:shadow-emerald-900/5 transition-shadow p-8 flex flex-col justify-between relative group overflow-hidden">
+        <div class="absolute inset-0 bg-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <div class="relative z-10">
+          <BarChart3 size={32} className="text-purple-500 mb-4" />
+          <h3 class="text-2xl font-semibold mb-2">Métricas en vivo</h3>
+          <p class="text-zinc-500">Mide el rendimiento de tus bots y agentes.</p>
+        </div>
+      </div>
+
+      <!-- Respuestas Rápidas -->
+      <div class="bento-card bg-white rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl hover:shadow-emerald-900/5 transition-shadow p-8 flex flex-col justify-between relative group overflow-hidden">
+        <div class="absolute inset-0 bg-yellow-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <div class="relative z-10">
+          <Zap size={32} className="text-yellow-500 mb-4" />
+          <h3 class="text-2xl font-semibold mb-2">Respuestas Rápidas</h3>
+          <p class="text-zinc-500">Plantillas para agilizar el trabajo humano.</p>
+        </div>
+      </div>
+
+      <!-- Equipos -->
+      <div class="bento-card md:col-span-2 bg-white rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl hover:shadow-emerald-900/5 transition-shadow p-8 flex flex-col justify-between relative group overflow-hidden">
+        <div class="absolute inset-0 bg-emerald-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+          <div class="flex-1">
+            <Users size={32} className="text-emerald-500 mb-4" />
+            <h3 class="text-2xl font-semibold mb-2">Gestión de Equipos</h3>
+            <p class="text-zinc-500">Asigna roles, departamentos y distribuye chats inteligentemente.</p>
+          </div>
+          <!-- Avatars demo -->
+          <div class="flex -space-x-4">
+            <div class="w-12 h-12 rounded-full bg-emerald-100 border-2 border-white flex items-center justify-center font-bold text-emerald-700 shadow-sm">A</div>
+            <div class="w-12 h-12 rounded-full bg-emerald-200 border-2 border-white flex items-center justify-center font-bold text-emerald-800 shadow-sm">B</div>
+            <div class="w-12 h-12 rounded-full bg-emerald-300 border-2 border-white flex items-center justify-center font-bold text-emerald-900 shadow-sm">C</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .bento-card {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+</style>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const initBentoAnimations = () => {
+    gsap.to('.bento-card', {
+      scrollTrigger: {
+        trigger: '#bento-section',
+        start: 'top 80%',
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: 'power3.out'
+    });
+  };
+
+  initBentoAnimations();
+</script>

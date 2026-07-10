@@ -1,0 +1,10 @@
+.agents
+.gemini
+node_modules
+.astro
+dist
+.env
+.github
+.wrangler
+.netlify
+.vscode

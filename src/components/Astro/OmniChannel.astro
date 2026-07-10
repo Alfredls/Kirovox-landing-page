@@ -1,0 +1,72 @@
+---
+import { MessageCircle, Send, Globe, Code2 } from 'lucide-react';
+---
+<section id="omnichannel-section" class="bg-white py-24 text-zinc-950 relative border-b border-zinc-100">
+  <div class="max-w-[1400px] w-full mx-auto px-6">
+    
+    <!-- Title -->
+    <div class="mb-16 md:mb-20 max-w-2xl">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 leading-[1.05]">Conecta en cualquier lugar</h2>
+      <p class="text-xl font-light text-zinc-500">Tus canales favoritos, integrados de forma nativa.</p>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Web Widget -->
+      <div class="md:col-span-2 bg-zinc-50 rounded-[2rem] p-10 border border-zinc-200 flex flex-col justify-between min-h-[400px] group overflow-hidden relative">
+        <div class="relative z-10 max-w-md">
+          <div class="w-12 h-12 bg-white rounded-xl border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
+            <Globe className="text-zinc-950" size={24} strokeWidth={1.5} />
+          </div>
+          <h3 class="text-3xl font-semibold mb-4 tracking-tight">Tu Sitio Web</h3>
+          <p class="text-zinc-600 font-light leading-relaxed mb-8">
+            Inserta nuestro widget flotante en tu landing page o SaaS con una sola línea de código. Adapta los colores a tu marca y captura leads directamente desde tu página de inicio.
+          </p>
+          <button class="text-sm font-medium text-zinc-950 flex items-center gap-2 hover:gap-3 transition-all">
+            Descubrir más <span class="text-zinc-400">&rarr;</span>
+          </button>
+        </div>
+        <!-- Abstract Decoration -->
+        <div class="absolute right-0 bottom-0 w-64 h-64 bg-zinc-200/50 rounded-tl-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+      </div>
+
+      <!-- Telegram -->
+      <div class="md:col-span-1 bg-zinc-950 text-white rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden group">
+        <div class="relative z-10">
+          <div class="w-12 h-12 bg-zinc-800 rounded-xl border border-zinc-700 flex items-center justify-center mb-6">
+            <Send className="text-white" size={24} strokeWidth={1.5} />
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 tracking-tight">Telegram</h3>
+          <p class="text-zinc-400 font-light leading-relaxed">
+            Configura flujos con botones interactivos y respuestas multimedia para tu comunidad.
+          </p>
+        </div>
+        <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-zinc-800 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="md:col-span-1 bg-emerald-50 rounded-[2rem] p-10 border border-emerald-100 flex flex-col justify-between min-h-[400px] relative overflow-hidden group">
+        <div class="relative z-10">
+          <div class="w-12 h-12 bg-white rounded-xl border border-emerald-200 flex items-center justify-center mb-6 shadow-sm">
+            <MessageCircle className="text-emerald-700" size={24} strokeWidth={1.5} />
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 tracking-tight text-emerald-950">WhatsApp</h3>
+          <p class="text-emerald-800/80 font-light leading-relaxed">
+            Soporte nativo con IA. Maneja reservaciones y transfiere a un agente humano cuando sea necesario.
+          </p>
+        </div>
+      </div>
+      
+      <!-- API Abierta -->
+      <div class="md:col-span-2 bg-white rounded-[2rem] p-10 border border-zinc-200 flex flex-col justify-center items-center text-center min-h-[400px] shadow-sm group">
+         <div class="w-12 h-12 bg-zinc-50 rounded-xl border border-zinc-200 flex items-center justify-center mb-6 text-zinc-500 group-hover:text-zinc-950 transition-colors">
+            <Code2 size={24} strokeWidth={1.5} />
+         </div>
+         <h3 class="text-2xl font-semibold tracking-tight text-zinc-950 mb-4">API Abierta</h3>
+         <p class="text-zinc-500 font-light max-w-md">Conecta cualquier otro canal o sistema interno usando nuestra API REST documentada y webhooks en tiempo real.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
