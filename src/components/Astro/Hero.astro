@@ -1,5 +1,13 @@
 ---
 import Button from './Button.astro';
+import { Image } from 'astro:assets';
+import img1 from '../../../public/images/img1.png';
+import img2 from '../../../public/images/img2.png';
+import img3 from '../../../public/images/img3.png';
+import img4 from '../../../public/images/img4.png';
+import img5 from '../../../public/images/img5.png';
+
+const images = [img1, img2, img3, img4, img5];
 ---
 <section id="hero-section" class="relative min-h-[100dvh] bg-white flex flex-col justify-center pt-24 pb-12 overflow-hidden border-b border-zinc-100">
   
@@ -86,12 +94,9 @@ import Button from './Button.astro';
       <!-- Mobile Auto-Scrolling Marquee (lg:hidden) -->
       <div class="lg:hidden w-full absolute top-1/2 -translate-y-1/2 mask-edges">
         <div class="flex gap-4 w-max animate-marquee hover:[animation-play-state:paused]">
-          {[
-            '1.png','2.png','3.png','4.png','5.png',
-            '1.png','2.png','3.png','4.png','5.png'
-          ].map((img) => (
+          {[...images, ...images].map((img) => (
             <figure class="flex-none w-[260px] sm:w-[320px] rounded-[18px] overflow-hidden shadow-xl border border-zinc-200/60 bg-white">
-              <img src={`/images/img${img}`} alt="Gallery image" class="w-full h-auto object-cover pointer-events-none" />
+              <Image src={img} alt="Gallery image" class="w-full h-auto object-cover pointer-events-none" />
             </figure>
           ))}
         </div>
@@ -100,11 +105,9 @@ import Button from './Button.astro';
       <!-- Desktop 3D Flow (lg:block) -->
       <div class="hidden lg:block absolute inset-0 w-full h-full pointer-events-none" style="perspective: 3400px;">
         <div class="absolute inset-0 w-full h-full" style="transform-style: preserve-3d; transform: rotateX(3deg) rotateY(-4deg);">
-          {[
-            '1.png','2.png','3.png','4.png','5.png'
-          ].map((img) => (
+          {images.map((img) => (
             <figure class="hero-3d-card absolute left-1/2 top-1/2 w-[62%] rounded-[18px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-zinc-200/80 bg-white will-change-transform" style="opacity: 0;">
-              <img src={`/images/img${img}`} alt="Gallery image" class="w-full h-auto object-cover" />
+              <Image src={img} alt="Gallery image" class="w-full h-auto object-cover" />
             </figure>
           ))}
         </div>
