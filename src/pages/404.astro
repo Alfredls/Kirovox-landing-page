@@ -1,0 +1,19 @@
+---
+// Redirige cualquier ruta inexistente a la raíz (/)
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirigiendo...</title>
+    <!-- Redirección nativa por HTML -->
+    <meta http-equiv="refresh" content="0;url=/" />
+    <!-- Redirección de respaldo usando JavaScript -->
+    <script>
+      window.location.replace("/");
+    </script>
+  </head>
+  <body style="background-color: #fafafa; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; color: #333; margin: 0;">
+    <p>Redirigiendo a la página principal...</p>
+  </body>
+</html>
