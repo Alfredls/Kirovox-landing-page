@@ -9,7 +9,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
     <!-- Backgrounds / Slides -->
     
     <!-- SLIDE 1: Privada y Segura -->
-    <div class="seq-bg seq-bg-1 absolute inset-0 bg-zinc-50 flex flex-col items-center justify-start md:justify-center pt-[12vh] md:pt-0">
+    <div class="seq-bg seq-bg-1 absolute inset-0 bg-zinc-50 flex flex-col items-center justify-start md:justify-center pt-[12vh] md:pt-0" style="will-change: opacity;">
         <!-- Giant Background Icon -->
         <ShieldCheck class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-auto md:right-[10%] w-[70vw] h-[70vw] md:w-[35vw] md:h-[35vw] text-black/[0.03] select-none" strokeWidth={1} />
         <!-- Content -->
@@ -24,7 +24,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
     </div>
 
     <!-- SLIDE 2: Fácil de Actualizar -->
-    <div class="seq-bg seq-bg-2 absolute inset-0 bg-[#A5F3FC] flex flex-col items-center justify-end md:justify-center pb-[12vh] md:pb-0 opacity-0">
+    <div class="seq-bg seq-bg-2 absolute inset-0 bg-[#A5F3FC] flex flex-col items-center justify-end md:justify-center pb-[12vh] md:pb-0 opacity-0" style="will-change: opacity;">
         <!-- Giant Background Icon -->
         <RefreshCcw class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:right-auto md:left-[10%] w-[70vw] h-[70vw] md:w-[35vw] md:h-[35vw] text-cyan-900/[0.04] select-none" strokeWidth={1} />
         <!-- Content -->
@@ -39,7 +39,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
     </div>
 
     <!-- SLIDE 3: Respuestas Precisas -->
-    <div class="seq-bg seq-bg-3 absolute inset-0 bg-[#10b981a3] flex flex-col items-center justify-start md:justify-center pt-[12vh] md:pt-0 opacity-0">
+    <div class="seq-bg seq-bg-3 absolute inset-0 bg-[#10b981a3] flex flex-col items-center justify-start md:justify-center pt-[12vh] md:pt-0 opacity-0" style="will-change: opacity;">
         <!-- Giant Background Icon -->
         <Sparkles class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-auto md:right-[10%] w-[70vw] h-[70vw] md:w-[35vw] md:h-[35vw] text-white/[0.1] select-none" strokeWidth={1} />
         <!-- Content -->
@@ -71,7 +71,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
             <!-- SCREENS -->
             
             <!-- Screen 1: Security -->
-            <div class="phone-screen phone-screen-1 absolute inset-0 bg-zinc-950 flex flex-col items-center justify-center p-6 text-center">
+            <div class="phone-screen phone-screen-1 absolute inset-0 bg-zinc-950 flex flex-col items-center justify-center p-6 text-center" style="will-change: opacity;">
                 <div class="w-16 h-16 bg-brand-deep/30 rounded-full flex items-center justify-center mb-6 border border-brand-deep/50">
                     <svg class="w-8 h-8 text-brand-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -87,7 +87,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
             </div>
 
             <!-- Screen 2: Easy Update -->
-            <div class="phone-screen phone-screen-2 absolute inset-0 bg-zinc-50 opacity-0 flex flex-col">
+            <div class="phone-screen phone-screen-2 absolute inset-0 bg-zinc-50 opacity-0 flex flex-col" style="will-change: opacity;">
                 <div class="h-16 bg-white border-b border-zinc-200 flex items-end justify-center pb-3 text-zinc-950 font-medium text-sm shadow-sm z-10">Conocimiento</div>
                 <div class="flex-1 p-4 flex flex-col space-y-3 pt-6">
                     <div class="w-full bg-white p-3 rounded-xl flex items-center gap-3 border border-zinc-200 shadow-sm">
@@ -114,7 +114,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
             </div>
 
             <!-- Screen 3: Accurate Responses -->
-            <div class="phone-screen phone-screen-3 absolute inset-0 bg-zinc-900 opacity-0 flex flex-col">
+            <div class="phone-screen phone-screen-3 absolute inset-0 bg-zinc-900 opacity-0 flex flex-col" style="will-change: opacity;">
                 <div class="h-16 bg-zinc-950 flex items-end justify-center pb-3 text-white font-medium text-sm shadow-sm z-10 border-b border-zinc-800">Chat Cliente</div>
                 <div class="flex-1 p-4 flex flex-col space-y-3 justify-end pb-8">
                     <div class="bg-zinc-800 p-3 rounded-2xl rounded-tr-sm shadow-sm text-xs text-white self-end w-[85%] font-light">
@@ -191,7 +191,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
               rotationZ: -2,
               scale: isDesktop ? 0.9 : 0.8,
               z: -100, // push back slightly for depth
-              boxShadow: "20px 30px 60px rgba(0,0,0,0.4)", // light shifts
+              boxShadow: isDesktop ? "20px 30px 60px rgba(0,0,0,0.4)" : "-20px 20px 60px rgba(0,0,0,0.5)", // Only animate on desktop
               duration: 1,
               ease: "power2.inOut"
           }, 'slide2')
@@ -219,7 +219,7 @@ import { ShieldCheck, RefreshCcw, Sparkles } from 'lucide-astro';
               rotationZ: 5,
               scale: isDesktop ? 1.05 : 0.9,
               z: 100, // pull forward
-              boxShadow: "-30px 40px 80px rgba(0,0,0,0.6)",
+              boxShadow: isDesktop ? "-30px 40px 80px rgba(0,0,0,0.6)" : "-20px 20px 60px rgba(0,0,0,0.5)",
               duration: 1,
               ease: "power2.inOut"
           }, 'slide3')
