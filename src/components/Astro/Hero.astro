@@ -89,18 +89,7 @@ const images = [img1, img2, img3, img4, img5];
     </div>
 
     <!-- Visual Content (Right) - 3D Carousel & Mobile Marquee -->
-    <div id="hero-visual" class="relative w-full h-[260px] md:h-[400px] lg:h-[800px] flex items-center justify-center lg:mt-0 opacity-0 overflow-hidden lg:overflow-visible">
-      
-      <!-- Mobile Auto-Scrolling Marquee (lg:hidden) -->
-      <div class="lg:hidden w-full absolute top-1/2 -translate-y-1/2 mask-edges">
-        <div class="flex gap-4 w-max animate-marquee hover:[animation-play-state:paused] will-change-transform">
-          {[...images, ...images].map((img) => (
-            <figure class="flex-none w-[260px] sm:w-[320px] rounded-[18px] overflow-hidden shadow-xl border border-zinc-200/60 bg-white">
-              <Image src={img} alt="Gallery image" class="w-full h-auto object-cover pointer-events-none" />
-            </figure>
-          ))}
-        </div>
-      </div>
+    <div id="hero-visual" class="relative w-full h-[260px] md:h-[400px] lg:h-[800px] hidden lg:flex items-center justify-center lg:mt-0 opacity-0 overflow-hidden lg:overflow-visible">
 
       <!-- Desktop 3D Flow (lg:block) -->
       <div class="hidden lg:block absolute inset-0 w-full h-full pointer-events-none" style="perspective: 3400px;">
